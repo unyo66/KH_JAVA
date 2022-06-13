@@ -10,9 +10,10 @@ public class Line {
 	
 	public boolean isSameLine(Line a)
 	{
-		if (this.howLong == a.howLong)
-			return true;
-		else
-			return false;
+//		if (this.howLong == a.howLong)
+//			return true;
+//		else
+//			return false;
+		return this.howLong == a.howLong ?  true :  false;
 	}
 }

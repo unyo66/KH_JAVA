@@ -4,9 +4,9 @@ public class Member {
 	private String name;
 	private String id;
 	private String pw;
-	private String age;
+	private int age;
 	
-	public Member(String name, String id, String pw, String age)
+	public Member(String name, String id, String pw, int age)
 	{
 		this.name = name;
 		this.id = id;
@@ -14,20 +14,20 @@ public class Member {
 		this.age = age;
 	}
 	
-	public void getName()
+	public String getName()
 	{
-		System.out.println(name);
+		return name;
 	}
-	public void getId()
+	public String getId()
 	{
-		System.out.println(id);
+		return id;
 	}
-	public void getPw()
+	public String getPw()
 	{
-		System.out.println(pw);
+		return pw;
 	}
-	public void getAge()
+	public int getAge()
 	{
-		System.out.println(age);
+		return age;
 	}
 }

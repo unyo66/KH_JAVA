@@ -3,12 +3,12 @@ package pt2.testObject;
 public class MemberTest {
 
 	public static void main(String[] args) {
-		Member m1 = new Member("이고훈", "unyo6", "789456@@", "30");
+		Member m1 = new Member("이고훈", "unyo6", "789456@@", 30);
 		
-		m1.getAge();
-		m1.getId();
-		m1.getName();
-		m1.getPw();
+		System.out.println(m1.getAge());
+		System.out.println(m1.getName());
+		System.out.println(m1.getId());
+		System.out.println(m1.getPw());
 	}
 
 }
