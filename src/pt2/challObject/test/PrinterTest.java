@@ -13,6 +13,6 @@ public class PrinterTest
 		p.print(30);
 		p.addPaper(40);
 		p.print(30);
-		p.addPaper(10);
+		p.addPaper(100);
 	}
 }
