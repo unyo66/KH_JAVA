@@ -6,8 +6,8 @@ public class GirlTest {
 		Girl g1 = new Girl();
 		Girl g2 = new GirlGood();
 		GirlGood gg = new GirlBest();
-		g1.show();
-		g2.show(); 
+		g1.show(); //Girl class에 show 메소드가 없다면 실행 안됨
+		g2.show(); //Girl class에 show 메소드가 없다면 실행 안됨
 		gg.show();
 	}
 

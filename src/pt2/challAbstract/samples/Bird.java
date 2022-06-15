@@ -15,6 +15,6 @@ public class Bird implements Countable{
 	
 	public void fly(int birds)
 	{
-		System.out.println("우리는 " + birds + "마리가 함께 날아간다");
+		System.out.println("새 " + birds + "마리가 함께 날아간다");
 	}
 }

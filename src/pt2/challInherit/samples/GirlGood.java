@@ -1,6 +1,7 @@
 package pt2.challInherit.samples;
 
 public class GirlGood extends Girl {
+	
 	@Override
 	public void show()
 	{
