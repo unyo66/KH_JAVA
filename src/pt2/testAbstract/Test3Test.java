@@ -1,24 +1,32 @@
 package pt2.testAbstract;
 
-import java.util.Collections;
+import java.util.Arrays;
 
-public class Test3Test implements Comparable<Test3Book> {
-	@Override
-	public int compareTo(Test3Book book)
+class Books implements Comparable<Object> {
+	int price;
+	
+	public Books(int n)
 	{
-		return book.getPrice();
+		this.price = n;
 	}
-
+	@Override
+	public int compareTo(Object o)//Arrays.sort로 객체 정렬하기 위한 기준 메소드
+	{
+		return this.price - ((Books)o).price;
+	}
+}
+public class Test3Test
+{
 	public static void main(String[] args) {
-		Test3Book[] books = {new Test3Book(50000), new Test3Book(20000)};
+		Books[] books = {new Books(50000), new Books(20000)};
 		
-		for (Test3Book e : books)
-			e.print();
+		for (Books e : books)
+			System.out.println(e.price);
 		
-		Collections.sort(books);
+		Arrays.sort(books);//compareTo로 기준 만들고 객체 정렬
 		
-		for (Test3Book e : books)
-			e.print();
+		for (Books e : books)
+			System.out.println(e.price);
 	}
 
 }
