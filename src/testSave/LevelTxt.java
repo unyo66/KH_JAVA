@@ -11,7 +11,7 @@ public class LevelTxt {
 	{
 		int ret = 0;
 		try {
-			File file = new File("C:\\Users\\user2\\gohun\\level.txt");
+			File file = new File("C:\\Users\\user2\\gohun\\KH_MAC\\level.txt");
 			Scanner sc = new Scanner(file);
 			if(sc.hasNextLine())
 			{
@@ -31,7 +31,7 @@ public class LevelTxt {
 		
 		try 
 		{
-		    OutputStream output = new FileOutputStream("C:\\Users\\user2\\gohun\\level.txt");
+		    OutputStream output = new FileOutputStream("C:\\Users\\user2\\gohun\\KH_MAC\\level.txt");
 		    String str = String.valueOf(lv.getLevel());	    
 		    byte[] by=str.getBytes();
 		    output.write(by);

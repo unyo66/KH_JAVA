@@ -4,6 +4,7 @@ module KH_MAC {
 	exports pt1.test2;
 	exports pt1.test1;
 	exports pt2.testCircle;
+	exports pt3.edu;
 	exports pt2.testDiagram.run;
 	exports pt2.testObject;
 	exports pt2.testDiagram.controller;
