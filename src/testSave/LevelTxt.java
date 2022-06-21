@@ -15,7 +15,7 @@ public class LevelTxt {
 			Scanner sc = new Scanner(file);
 			if(sc.hasNextLine())
 			{
-				ret += Integer.parseInt(sc.next());
+				ret = Integer.parseInt(sc.next());
 			}
 			sc.close();
 		} catch (FileNotFoundException e)

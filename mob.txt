@@ -1,0 +1,7 @@
+slime 10 1
+ork 25 2
+ironhog 40 3
+skeleton 70 6
+balrog 130 10
+demon 230 20
+stormrage 499 49
