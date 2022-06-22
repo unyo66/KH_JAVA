@@ -6,8 +6,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class LevelTxt {
+	private static int level;
 		
-	public int txtToLevel()
+	public void txtToLevel()
 	{
 		int ret = 0;
 		try {
@@ -22,17 +23,16 @@ public class LevelTxt {
 		{
 			
 		}
-		return ret;
+		LevelTxt.level = ret;
 	}
 	
 	public void levelToTxt() 
 	{
-		Level lv = new Level();
 		
 		try 
 		{
 		    OutputStream output = new FileOutputStream("C:\\Users\\user2\\gohun\\KH_MAC\\level.txt");
-		    String str = String.valueOf(lv.getLevel());	    
+		    String str = String.valueOf(level);	    
 		    byte[] by=str.getBytes();
 		    output.write(by);
 			output.close();	
@@ -42,6 +42,16 @@ public class LevelTxt {
 		{
 	            e.getStackTrace();
 		}
+	}
+	
+	public int getLevel()
+	{
+		return level;
+	}
+	
+	public void changeLevel(int n)
+	{
+		level += n;
 	}
 
 }

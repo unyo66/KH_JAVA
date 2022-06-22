@@ -6,9 +6,10 @@ public class Run {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("뭐 할래? 사냥 / 뭐시기 / 뭐시기");
-		String input = sc.next();
-		if (input.equals("안해")) 
+		String input;
+		System.out.println("뭐 할래? 사냥 / 기부 / 종료");
+		input = sc.next();
+		if (input.equals("종료")) 
 		{
 			System.out.println("종료");
 		} 
@@ -22,7 +23,14 @@ public class Run {
 				Donate donate = new Donate();
 				donate.donate();
 			}
-			main(args);
+			try
+			{
+				main(args);
+			}
+			catch(Exception e)
+			{
+				System.out.println("에러");
+			}
 		}
 
 	}

@@ -4,61 +4,51 @@ import java.util.Scanner;
 
 public class Hunt {
 	
-	static void freeze()
-	{
-		try {
-			Thread.sleep(700);
-		}
-		catch(Exception e)
-		{
-			
-		}
-	}
+	
 	public void startHunt()
 	{
 
 		Scanner sc = new Scanner(System.in);
 		LevelTxt txt = new LevelTxt();
-		Level lv = new Level();
 		Hunt hunt = new Hunt();
 		MobTxt mobs = new MobTxt();
 		
-		lv.setLevel(txt.txtToLevel());
+		txt.txtToLevel();
 
-		System.out.println("현재 레벨은 " + lv.getLevel() + "입니다.");
-		System.out.println("사냥을 나서겠습니까? y / n");
+		System.out.println("현재 레벨은 " + txt.getLevel() + "입니다.");
+		System.out.println("사냥을 나서겠습니까? 예 / 아니오");
 		String input = sc.next();
-		if (input.equals("y"))
+		if (input.equals("예"))
 		{
 			for (int i = 0; i < mobs.mobInfo.size(); i++)
 			{
-				if (lv.getLevel() >= mobs.getMobLv(i) / 2 && lv.getLevel() <= mobs.getMobLv(i) * 1.5)
+				if (txt.getLevel() >= mobs.getMobLv(i) / 2 && txt.getLevel() <= mobs.getMobLv(i) * 1.5)
 				System.out.print(mobs.getMobname(i) + "[lv" + mobs.getMobLv(i) + "] ");
 			}
 			String target = sc.next();
-			int result = hunt.hunting(lv.getLevel(), target);
+			int result = hunt.hunting(txt.getLevel(), target);
 			
 			//사냥중...
 			
 			if (result > 0)
 			{
 				System.out.println("사냥 중...");
-				freeze();
+				new Freeze().freeze(7);
 				System.out.println("사냥에 성공했습니다! 레벨이 " + result + " 올랐습니다.");
 			}
 			else if (result < 0)
 			{
 				System.out.println("사냥 중...");
-				freeze();
+				new Freeze().freeze(7);
 				System.out.println("사냥에 실패해 레벨이 " + (-result) + "만큼 떨어졌습니다.");
 			}
 			else
 				System.out.println("그런 몬스터는 없습니다.");
 			
-			lv.changeLevel(result);
+			txt.changeLevel(result);
 			txt.levelToTxt();
 			
-			freeze();
+			new Freeze().freeze(7);
 			
 			this.startHunt();
 		}
