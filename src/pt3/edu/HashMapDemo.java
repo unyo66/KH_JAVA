@@ -11,7 +11,6 @@ public class HashMapDemo {
 		map.put(2, "BlackBerry");
 		
 		Iterator<Integer> iterKey = map.keySet().iterator();
-		System.out.println(iterKey.next());
 		while(iterKey.hasNext())
 		{
 			int key = iterKey.next();
