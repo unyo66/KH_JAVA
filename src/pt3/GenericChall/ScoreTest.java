@@ -6,13 +6,12 @@ public class ScoreTest {
 	
 	static <T> T findScore(T[] a, String name)
 	{
-		EnglishScore error = new EnglishScore("인자가 없습니다.", 0);
 		for (T e : a)
 		{
 			if (e.toString().substring(0, 3).equals(name))
 				return e;
 		}
-		return (T) error;
+		return null;
 	}
 	
 	static <T extends Comparable<T>> T findBest(T[] a) 
@@ -33,12 +32,19 @@ public class ScoreTest {
 		System.out.println("영어 최고 점수 : " + findBest(ea));
 		MathScore[] ma = {new MathScore("김삿갓", 77),new MathScore("장영실", 100), new MathScore("홍길동", 99)};
 		System.out.println("수학 최고 점수 : " + findBest(ma));
-		System.out.println("영어     점수 : " + findScore(ea, "장영실"));
-		System.out.println("수학     점수 : " + findScore(ma, "김삿갓"));
-		System.out.println("수학     점수 : " + findScore(ma, "김갓"));
-
-
-
+		String name = null;
+		
+		try {
+			name = args[0];
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("명령행 인자가 없습니다.");
+			return;
+		}
+		System.out.println("영어     점수 : " + findScore(ea, name));
+		System.out.println("수학     점수 : " + findScore(ma, name));
+	
 	}
 
 }

@@ -41,5 +41,6 @@ public class Test5 {
 				System.out.println("등급은 A이다.");
 			
 		}
+		sc.close();
 	}
 }
