@@ -11,7 +11,7 @@ public class Run {
 		input = sc.next();
 		if (input.equals("종료")) 
 		{
-			System.out.println("종료");
+			System.out.println("-종료-");
 		} 
 		else 
 		{

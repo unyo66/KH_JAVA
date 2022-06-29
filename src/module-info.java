@@ -25,6 +25,7 @@ module KH_MAC {
 	exports pt2.testInherit;
 	exports pt2.challArray;
 	exports pt3.challAPI;
+	exports pt3.testGeneric;
 	exports pt2.challInherit.test;
 	exports pt2.challAbstract.samples;
 	exports pt2.edu;
