@@ -11,7 +11,7 @@ public class MapDemo {
 		
 		for (String key : fruits.keySet())
 			System.out.println(key + "가 " + fruits.get(key) + "개 있습니다.");
-		
+		fruits.keySet().forEach(x -> System.out.println(x));
 		String key = "바나나";
 		if (fruits.containsKey(key))
 			System.out.println(key + "가 " + fruits.get(key) + "개 있습니다.");

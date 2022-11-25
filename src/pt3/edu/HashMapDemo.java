@@ -1,5 +1,6 @@
 package pt3.edu;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
 
 public class HashMapDemo {
 
@@ -9,7 +10,9 @@ public class HashMapDemo {
 		map.put(4, "Dandelion");
 		map.put(3, "Corn");
 		map.put(2, "BlackBerry");
-		
+		System.out.println(map);
+		map.forEach(((x, y) -> System.out.print("key" + x + " : " + x + ", value" + x + " : " + y + "\n")));
+		System.out.println(map);
 		Iterator<Integer> iterKey = map.keySet().iterator();
 		while(iterKey.hasNext())
 		{

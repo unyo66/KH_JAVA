@@ -14,13 +14,16 @@ public class SimpleDate {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
 		System.out.println(sdf.format(d));
 		
-		SimpleDateFormat sdf1 = new SimpleDateFormat("E yyyy.MM.dd 'at' hh:mmss a z");
+		SimpleDateFormat sdf1 = new SimpleDateFormat("E yyyy.MM.dd 'at' hh:mm:ss a z");
 		System.out.println(sdf1.format(d));
 		
 		SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd");
 		
+		String y1 = "2025";
+		String m1 = "02";
+		String d1 = "28";
 		try {
-			d = sdf2.parse("2023-02-28");
+			d = sdf2.parse(y1 + "-" + m1 + "-" + d1);
 		} catch (ParseException e) {}
 		
 		
